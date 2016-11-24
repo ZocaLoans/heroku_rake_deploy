@@ -1,4 +1,4 @@
-# HerokuDeploy
+# HerokuRakeDeploy
 
 A (for now) very opinionated gem which has 3 sections:
 
@@ -23,7 +23,7 @@ App name configuration flags and more detailed documentation will come in a late
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'heroku_deploy', group: :development # No need to include this on production or staging
+gem 'heroku_rake_deploy', group: :development # No need to include this on production or staging
 ```
 
 And then execute:
@@ -32,11 +32,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install heroku_deploy
+    $ gem install heroku_rake_deploy
 
 ## Usage
 To see an updated list of tasks and descriptions:
-`bundle exec rake heroku_deploy -T heroku_deploy`
+`bundle exec rake heroku_rake_deploy -T heroku_rake_deploy`
 
 ~~~bash
 rake db:restore                  # Pull Down a copy of the database from the specified heroku environment
@@ -53,7 +53,7 @@ rake deploy:staging:quick        # Quick Deploy to Staging, without running migr
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/ldstudios/heroku_deploy.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ldstudios/heroku_rake_deploy.
 
 
 ## License

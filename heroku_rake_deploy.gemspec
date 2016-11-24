@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'heroku_deploy/version'
+require 'heroku_rake_deploy/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "heroku_deploy"
-  spec.version       = HerokuDeploy::VERSION
+  spec.name          = "heroku_rake_deploy"
+  spec.version       = HerokuRakeDeploy::VERSION
   spec.authors       = ["nrowegt", "danielricecodes"]
   spec.email         = ["nrowegt@gmail.com", "daniel.rice@ldstudios.co"]
 
   spec.summary       = "Helpful Heroku Deploy Rake Tasks"
   spec.description   = "Tasks to run appllication deploys and db restores for heroku:pg databases"
-  spec.homepage      = "https://github.com/ldstudios/heroku_deploy"
+  spec.homepage      = "https://github.com/ldstudios/heroku_rake_deploy"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
