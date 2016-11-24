@@ -1,22 +1,13 @@
 # HerokuRakeDeploy
 
-A (for now) very opinionated gem which has 3 sections:
+Provides deploy and db restore tasks for your app
 
-* pipeline/app setup
-* db restore (pull down your heroku database and `psql < tmp/latest.db`)
-* deploys (push to heroku remotes)
+Use the following environmental variables to control the heroku app name to be deployed/restored from:
 
-These tasks all assume your heroku application names are of the format `"#{Rails.application.class.parent_name.underscore.gsub('_','-')}-#{environment}"`, where environment is one of staging, production. Setting up an app includes the following free Heroku addons:
-
-*heroku-postgresql:hobby-dev
-*newrelic:wayne
-*papertrail:choklad
-*rediscloud:30 
-*scheduler:standard
-*sendgrid:starter
-
-App name configuration flags and more detailed documentation will come in a later version.
-
+```
+HEROKU_APPNAME_PRODUCTION
+HEROKU_APPNAME_STAGING
+```
 
 ## Installation
 
