@@ -42,6 +42,10 @@ rake deploy:staging:quick        # Quick Deploy to Staging, without running migr
 ~~~
 
 
+## Dependencies
+The `db:restores`  tasks rely on the following gem:
+* https://github.com/ldstudios/heroku_db_restore
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/ldstudios/heroku_rake_deploy.
