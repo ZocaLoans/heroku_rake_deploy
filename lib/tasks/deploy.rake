@@ -61,6 +61,7 @@ namespace :deploy do
   namespace :production do
     desc 'Quick Deploy to Production, without running migrations.'
     task :quick do
+      ENV['ENV'] = "production"
       env = ENV['ENV']
       app_name = app_name_from_environment(env)
       Bundler.with_clean_env do
@@ -74,6 +75,7 @@ namespace :deploy do
   namespace :staging do
     desc 'Quick Deploy to Staging, without running migrations.'
     task :quick do
+      ENV['ENV'] = "staging"
       env = ENV['ENV']
       app_name = app_name_from_environment(env)
       Bundler.with_clean_env do
