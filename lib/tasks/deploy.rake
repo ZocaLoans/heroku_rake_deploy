@@ -61,6 +61,7 @@ namespace :deploy do
   namespace :production do
     desc 'Quick Deploy to Production, without running migrations.'
     task :quick do
+      env = ENV['ENV']
       app_name = app_name_from_environment(env)
       Bundler.with_clean_env do
         puts `git push origin master`
@@ -73,6 +74,7 @@ namespace :deploy do
   namespace :staging do
     desc 'Quick Deploy to Staging, without running migrations.'
     task :quick do
+      env = ENV['ENV']
       app_name = app_name_from_environment(env)
       Bundler.with_clean_env do
         puts `git push origin staging`
