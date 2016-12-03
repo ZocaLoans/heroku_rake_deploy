@@ -67,7 +67,7 @@ namespace :deploy do
       Bundler.with_clean_env do
         puts `git push origin master`
         puts `git push production master`
-        puts `heroku restart --app app_name`
+        puts `heroku restart --app #{app_name}`
       end
     end
   end
@@ -81,7 +81,7 @@ namespace :deploy do
       Bundler.with_clean_env do
         puts `git push origin staging`
         puts `git push staging staging:master`
-        puts `heroku restart --app app_name`
+        puts `heroku restart --app #{app_name}`
       end
     end
   end
