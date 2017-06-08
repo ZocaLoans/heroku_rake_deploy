@@ -32,8 +32,8 @@ task :deploy do
   #push up new code release
   sh push_command_from_env(env)
 
-  #migrate database and ensure seed values are present always (Settings, ContentMgmts)
-  sh "heroku run rake db:migrate db:seed --app #{app_name}"
+  #migrate database
+  sh "heroku run rake db:migrate --app #{app_name}"
 
   #restart dynos to ensure all users get the new released version immediately
   sh "heroku restart --app #{app_name}"
